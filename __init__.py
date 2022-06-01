@@ -9,9 +9,6 @@ from flask_bootstrap import Bootstrap
 from datetime import datetime
 import pytz
 
-def getApp():
-    return app
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SECRET_KEY'] = os.urandom(24)
@@ -114,3 +111,7 @@ def delete(id):
     db.session.commit()
 
     return redirect('/')
+
+
+if __name__=="__main__":
+    app.run()

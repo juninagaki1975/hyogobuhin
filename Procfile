@@ -1,1 +1,1 @@
-web: gunicorn hyogobuhin.wsgi --log-file -
+web: gunicorn app:app --log-file=-
