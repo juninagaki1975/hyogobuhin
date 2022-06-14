@@ -161,4 +161,4 @@ def user_name(username):
 if __name__=="__main__":
     app.run(Debug=False)
 
-    lits_db = db.query()
+    lists_db = db.query()
