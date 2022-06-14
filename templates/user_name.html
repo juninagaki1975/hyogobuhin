@@ -1,0 +1,16 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}ユーザー名一覧{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>ユーザー名一覧</h1>
+    <br>
+    <form method="GET">
+        <ul>
+            {% for name in user_name %}
+            <li>{{ name.username }}</li>
+            {% endfor %}
+        </ul>
+    </form>
+</div>
+{% endblock %}

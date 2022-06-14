@@ -7,6 +7,11 @@
 	<a href="/create" role="button">新規作成画面</a>
 	<a href="/logout" role="button">ログアウト</a>
 
+	<div class="container">
+		<h1>index.htmlを表示しています</h1>
+		<img src="{{ url_for('static', filename='img/test-pattern.jpg') }}">
+	</div>
+
 	{% for post in posts %}
 	<article>
 		<h2>{{ post.title }}</h2>
