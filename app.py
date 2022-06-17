@@ -4,7 +4,7 @@ from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_bootstrap import Bootstrap
+#from flask_bootstrap import Bootstrap
 
 from datetime import datetime
 import pytz
@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 db = SQLAlchemy(app)
-bootstrap = Bootstrap(app)
+#bootstrap = Bootstrap(app)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
