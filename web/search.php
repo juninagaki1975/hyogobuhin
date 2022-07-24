@@ -9,12 +9,12 @@ try{
     $msg = $e->getMessage();
 }
 
-$sql = "show columns from anken";
-$stmh = $pdo -> prepare($sql);
-$stmh -> execute();
-while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-    $rows[] = $row;
-}
+// $sql = "show columns from anken";
+// $stmh = $pdo -> prepare($sql);
+// $stmh -> execute();
+// while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+//     $rows[] = $row;
+// }
 $arr = ['ID','案件番号','件名'];
 $keys = ['id','anken_id','item_name'];
 
@@ -117,6 +117,7 @@ $stmh -> execute();
             <th><?php echo $arr[1] ;?></th>
             <th><?php echo $arr[2] ;?></th>
             <th>編集</th>
+            <th>削除</th>
         </tr>
         <?php
             $i = 1;
@@ -133,7 +134,12 @@ $stmh -> execute();
                 echo '</td>';
                 echo '<td>';
                 echo '<form action="edit.php" method="POST">';
-                echo '<button type="submit" name ="'.$i.'">編集</button>';
+                echo '<button type="submit" name="btn" value ="'.$row['id'].'">編集</button>';
+                echo '</form>';
+                echo '</td>';
+                echo '<td>';
+                echo '<form action="delete.php" method="POST">';
+                echo '<button type="submit" name="btn" value ="'.$row['id'].'">削除</button>';
                 echo '</form>';
                 echo '</td>';
                 echo '</tr>';

@@ -14,7 +14,7 @@ try{
 }
 
 try{
-    $sql = "insert into anken values($id,$anken_id,'$item_name')";
+    $sql = "delete from anken where id=".$id;
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (PDOException $e) { 
@@ -29,14 +29,14 @@ try{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登録内容確認画面</title>
+    <title>データ削除</title>
 </head>
 <body>
-    <h2>登録内容確認画面</h2>
+    <h2>データ削除</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-
-        <table>
+    <p>以下のデータを削除した</p>
+            <table>
             <tr>
                 <th>No.</th>
                 <td>
@@ -55,6 +55,15 @@ try{
                     <?php echo $item_name;?>
                 </td>
 
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <form action="del-confirm.php" method="POST">
+                        <input type="submit" name="削除">
+                    </form>
+                </td>
             </tr>
         </table>
    
