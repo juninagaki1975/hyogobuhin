@@ -17,12 +17,10 @@ try{
     $sql = "insert into anken values($id,$anken_id,'$item_name')";
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
-} catch (Exception $e) { 
-    echo "登録失敗";
-    exit();
+} catch (Exception $ex) { 
+    LogUtil::logError ( Const::DEF_LOG_DATABASE, $ex->getMessage () );
+    return FALSE;	
 }
-
-
 
 ?>
 
