@@ -1,23 +1,11 @@
 {
-    "name": "jun/hyogobuhin",
-    "autoload": {
-        "psr-4": {
-            "Jun\\Hyogobuhin\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "juninagaki1975",
-            "email": "juninagaki1975@gmail.com"
-        }
-    ],
-    "require": {
-	    "silex/silex": "~1.1"
-    },
-    "repositories": {
-        "my/repo": {
-            "type": "vcs",
-            "url": "https://github.com/juninagaki1975/hyogobuhin.git"
-        }
-    }
+  "require" : {
+    "silex/silex": "^2.0.4",
+    "monolog/monolog": "^1.22",
+    "twig/twig": "^2.0",
+    "symfony/twig-bridge": "^3"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
 }
