@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:host=localhost; dbname=hyogobuhin; charset=utf8";
-$username = "root";
-$password = "Daoyuan1975_";
+$dsn = "mysql:host=us-cdbr-east-06.cleardb.net; dbname=heroku_53c1b1b9ce85b0e; charset=utf8";
+$username = "bf87d40c92b415";
+$password = "c2bf4cac";
 
 try{
     $pdo = new PDO($dsn, $username, $password);
