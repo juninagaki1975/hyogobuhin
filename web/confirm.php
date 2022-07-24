@@ -18,7 +18,7 @@ try{
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (PDOException $e) { 
-    $msg = $e->getMessage());
+    $msg = $e->getMessage();
 }
 
 ?>
