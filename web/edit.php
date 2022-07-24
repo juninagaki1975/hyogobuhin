@@ -12,7 +12,7 @@ try{
 $id = $_POST['btn'];
 $sql = "SELECT * FROM anken WHERE id=".$id;
 $stmh = $pdo -> query($sql);
-$edit = $stmh -> fetch()
+$edit = $stmh -> fetch();
 
 ?>
 

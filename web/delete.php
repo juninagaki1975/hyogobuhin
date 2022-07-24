@@ -3,15 +3,16 @@ $dsn = "mysql:host=us-cdbr-east-06.cleardb.net; dbname=heroku_53c1b1b9ce85b0e; c
 $username = "bf87d40c92b415";
 $password = "c2bf4cac";
 
-$id = $_POST['id'];
-$anken_id = $_POST['anken_id'];
-$item_name = $_POST['item_name'];
-
 try{
     $pdo = new PDO($dsn, $username, $password);
 } catch (PDOException $e ) {
     $msg = $e->getMessage();
 }
+
+$id = $_POST['btn'];
+$sql = "SELECT * FROM anken WHERE id=".$id;
+$stmh = $pdo -> query($sql);
+$data = $stmh -> fetch();
 
 try{
     $sql = "delete from anken where id=".$id;
@@ -35,7 +36,7 @@ try{
     <h2>データ削除</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <p>以下のデータを削除した</p>
+    <p>以下のデータを削除しました</p>
             <table>
             <tr>
                 <th>No.</th>
@@ -46,13 +47,13 @@ try{
             <tr>
                 <th>案件番号</th>
                 <td>
-                    <?php echo $anken_id;?>
+                    <?php echo $data['anken_id'];?>
                 </td>
             </tr>
             <tr>
                 <th>件名</th>
                 <td>
-                    <?php echo $item_name;?>
+                    <?php echo $data['item_name'];?>
                 </td>
 
             </tr>
