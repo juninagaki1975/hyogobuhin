@@ -17,8 +17,8 @@ try{
     $sql = "insert into anken values($id,$anken_id,'$item_name')";
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
-} catch (Exception $ex) { 
-    $msg = $ex->getMessage());
+} catch (PDOException $e) { 
+    $msg = $e->getMessage());
 }
 
 ?>
