@@ -18,7 +18,7 @@ try{
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (Exception $ex) { 
-    LogUtil::logError ( Const::DEF_LOG_DATABASE, $ex->getMessage () );
+    LogUtil::logError(Const::DEF_LOG_DATABASE, $ex->getMessage());
     return FALSE;	
 }
 
