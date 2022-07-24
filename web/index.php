@@ -26,9 +26,9 @@ $aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
     <h2>兵庫部品システム</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <a href="web/search.php">検索</a>
-    <a href="web/submit.php">新規登録</a>
-    <a href="web/edit.php">編集</a>
+    <a href="search.php">検索</a>
+    <a href="submit.php">新規登録</a>
+    <a href="edit.php">編集</a>
     <hr>
 
 </body>
