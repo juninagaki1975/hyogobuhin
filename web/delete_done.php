@@ -23,7 +23,7 @@ try{
 }
 
 $to = "juninagaki1975@gmail.com";
-$mail_text = "下記のデータが削除されました\n".$data;
+$mail_text = "下記のデータが削除されました";
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -35,7 +35,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "POST",
-    CURLOPT_POSTFIELDS =>"{\"recipients\":[{\"email\":\"$to\"}],\"title\":\"Title\",\"html\":\"$mail_text\"}",
+    CURLOPT_POSTFIELDS =>"{\"recipients\":[{\"email\":\"$to\"}],\"title\":\"Title\",\"html\":\"$mail_text.$data\"}",
     CURLOPT_HTTPHEADER => array(
         "x-trustifi-key: " . $_ENV['TRUSTIFI_KEY'],
         "x-trustifi-secret: " . $_ENV['TRUSTIFI_SECRET'],
