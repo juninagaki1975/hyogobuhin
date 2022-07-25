@@ -32,7 +32,7 @@ try{
     <title>登録内容確認画面</title>
 </head>
 <body>
-    <h2>登録内容確認画面</h2>
+    <h2>以下の内容で登録しました</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
 
