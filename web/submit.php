@@ -14,6 +14,8 @@ $stmt = $pdo -> query($sql);
 $stmt -> execute();
 $result = $stmt -> fetch();
 $count = ++$result[0];
+
+$id = $count
 ?>
 
 <!DOCTYPE html>
