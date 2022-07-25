@@ -104,11 +104,8 @@ $stmh -> execute();
                 <td><input type="number" name="anken_id"></td>
                 <td><input type="text" name="item_name"></td>
             </tr>
-            <br>
-            <tr>
-                <td><p><input type="submit" name="search" value="検索"></p></td>
-            </tr>
         </table>
+        <td><p><input type="submit" name="search" value="検索"></p></td>
     </form>
     <hr>
     <table class="table-border" cellspacing="1" border="1" style="border-collapse: collapse">
