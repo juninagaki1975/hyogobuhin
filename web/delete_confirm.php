@@ -62,7 +62,7 @@ $data = $stmh -> fetch();
                 <td></td>
                 <td>
                     <form action="delete_done.php" method="POST">
-                        <button type="submit" name="btn" value = <?php echo $id; ?> >削除確認へ</button>
+                        <button type="submit" name="btn" value = <?php echo $id; ?> >決定</button>
                     </form>
                 </td>
             </tr>
