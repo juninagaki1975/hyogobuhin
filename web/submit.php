@@ -29,7 +29,6 @@ $count = ++$result[0];
     <h2>新規登録</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-
     <form action="confirm.php" method="POST">
         <input type="hidden" name=id value=<?php echo $count; ?>>
         <table>

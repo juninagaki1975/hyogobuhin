@@ -32,7 +32,6 @@ try{
     <title>更新内容確認</title>
 </head>
 <body>
-    <input type="hidden" name=id value=<?php echo $id; ?>>
     <h2>更新内容確認</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
@@ -61,6 +60,7 @@ try{
                 <td></td>
                 <td>
                     <form action="update_done.php" method="POST">
+                        <input type="hidden" name="id" value=<?php echo $id; ?>>
                         <button type="submit" name="btn" value = <?php echo $id; ?> >決定</button>
                     </form>
                 </td>

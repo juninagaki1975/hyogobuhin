@@ -25,12 +25,12 @@ $edit = $stmh -> fetch();
     <title>編集画面</title>
 </head>
 <body>
-    <input type="hidden" name="id" value="<?php echo $id; ?>">
     <h2>編集画面</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
     <form action="update_confirm.php" method="POST">
-        <table>
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <table>
             <tr>
                 <th>No.</th>
                 <td>
