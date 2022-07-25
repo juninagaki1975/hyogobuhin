@@ -15,7 +15,7 @@ try{
 // while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
 //     $rows[] = $row;
 // }
-$arr = ['ID','案件番号','件名'];
+$arr = ['No.','案件番号','件名'];
 $keys = ['id','anken_id','item_name'];
 
 // キーワード検索
@@ -101,7 +101,8 @@ $stmh -> execute();
                 <th><?php echo $arr[2] ;?></th>
             </tr>
             <tr>
-                <td><input type="number" name="id"></td>
+                <!-- <td><input type="number" name="id"></td> -->
+                <td><label><?php echo $key_id ;?></label></td>
                 <td><input type="number" name="anken_id"></td>
                 <td><input type="text" name="item_name"></td>
             </tr>
