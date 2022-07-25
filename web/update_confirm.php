@@ -14,7 +14,7 @@ try{
 }
 
 try{
-    $sql = "UPDATE anken SET anken_id=$anken_id item_name='$item_name' where id=$id ";
+    $sql = "UPDATE anken SET anken_id=$anken_id AND item_name='$item_name' where id=$id ";
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (PDOException $e) { 
