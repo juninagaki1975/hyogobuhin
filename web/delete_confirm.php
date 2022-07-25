@@ -14,13 +14,13 @@ $sql = "SELECT * FROM anken WHERE id=".$id;
 $stmh = $pdo -> query($sql);
 $data = $stmh -> fetch();
 
-try{
-    $sql = "delete from anken where id=".$id;
-    $stmt = $pdo -> query($sql);
-    $stmt -> execute();
-} catch (PDOException $e) { 
-    $msg = $e->getMessage();
-}
+// try{
+//     $sql = "delete from anken where id=".$id;
+//     $stmt = $pdo -> query($sql);
+//     $stmt -> execute();
+// } catch (PDOException $e) { 
+//     $msg = $e->getMessage();
+// }
 
 ?>
 
@@ -62,7 +62,7 @@ try{
                 <td></td>
                 <td>
                     <form action="del-confirm.php" method="POST">
-                        <input type="submit" value="削除">
+                        <button type="submit" name="btn" value = <?php $id; ?> >削除</button>
                     </form>
                 </td>
             </tr>

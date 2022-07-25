@@ -36,37 +36,7 @@ try{
     <h2>データ削除</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <p>以下のデータを削除します</p>
-    <table>
-            <tr>
-                <th>No.</th>
-                <td>
-                    <?php echo $id;?>
-                </td>
-            </tr>
-            <tr>
-                <th>案件番号</th>
-                <td>
-                    <?php echo $data['anken_id'];?>
-                </td>
-            </tr>
-            <tr>
-                <th>件名</th>
-                <td>
-                    <?php echo $data['item_name'];?>
-                </td>
-
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <form action="del-confirm.php" method="POST">
-                        <input type="submit" value="削除">
-                    </form>
-                </td>
-            </tr>
-        </table>
+    <p>削除しました</p>
    
 </body>
 <footer>

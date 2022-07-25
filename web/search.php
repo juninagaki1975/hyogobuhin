@@ -138,7 +138,7 @@ $stmh -> execute();
                 echo '</form>';
                 echo '</td>';
                 echo '<td>';
-                echo '<form action="delete.php" method="POST">';
+                echo '<form action="delete_confirm.php" method="POST">';
                 echo '<button type="submit" name="btn" value ="'.$row['id'].'">削除</button>';
                 echo '</form>';
                 echo '</td>';
