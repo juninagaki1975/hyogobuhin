@@ -14,14 +14,6 @@ $sql = "SELECT * FROM anken WHERE id=".$id;
 $stmh = $pdo -> query($sql);
 $data = $stmh -> fetch();
 
-try{
-    $sql = "delete from anken where id=".$id;
-    $stmt = $pdo -> query($sql);
-    $stmt -> execute();
-} catch (PDOException $e) { 
-    $msg = $e->getMessage();
-}
-
 ?>
 
 <!DOCTYPE html>
