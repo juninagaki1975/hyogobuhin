@@ -14,7 +14,7 @@ try{
 }
 
 try{
-    $sql = "UPDATE anken SET anken_id=$anken_id, item_name='$item_name' where id=$id";
+    $sql = "insert into anken values($id,$anken_id,'$item_name')";
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (PDOException $e) { 
@@ -29,10 +29,10 @@ try{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>更新内容確認</title>
+    <title>登録内容確認</title>
 </head>
 <body>
-    <h2>更新内容確認</h2>
+    <h2>登録内容確認</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
 
@@ -54,15 +54,7 @@ try{
                 <td>
                     <?php echo $item_name;?>
                 </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <form action="update_done.php" method="POST">
-                        <button type="submit" name="btn" value = <?php echo $id; ?> >決定</button>
-                    </form>
-                </td>
+
             </tr>
         </table>
    
