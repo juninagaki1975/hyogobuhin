@@ -15,7 +15,6 @@ $stmt -> execute();
 $result = $stmt -> fetch();
 $count = ++$result[0];
 
-$id = $count
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +31,7 @@ $id = $count
     <hr>
 
     <form action="confirm.php" method="POST">
+        <input type="hidden" name=id value=<?php echo $count; ?>>
         <table>
             <tr>
                 <th>No.</th>
