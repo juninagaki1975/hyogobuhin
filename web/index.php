@@ -28,7 +28,6 @@ $aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
     <hr>
     <a href="search.php">検索</a>
     <a href="submit.php">新規登録</a>
-    <a href="edit.php">編集</a>
     <hr>
 
 </body>
