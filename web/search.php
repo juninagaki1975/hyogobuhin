@@ -96,7 +96,7 @@ $stmh -> execute();
     <form action="search.php" method="POST">
         <table class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
-                <th><?php echo $arr[0] ;?></th>
+                <!-- <th><?php echo $arr[0] ;?></th> -->
                 <th><?php echo $arr[1] ;?></th>
                 <th><?php echo $arr[2] ;?></th>
             </tr>
