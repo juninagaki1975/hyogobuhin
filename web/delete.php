@@ -36,8 +36,8 @@ try{
     <h2>データ削除</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <p>以下のデータを削除しました</p>
-            <table>
+    <p>以下のデータを削除します</p>
+    <table class="table-border" cellspacing="1" border="1" style="border-collapse: collapse">
             <tr>
                 <th>No.</th>
                 <td>
@@ -62,7 +62,7 @@ try{
                 <td></td>
                 <td>
                     <form action="del-confirm.php" method="POST">
-                        <input type="submit" name="削除">
+                        <input type="submit" value="削除">
                     </form>
                 </td>
             </tr>
