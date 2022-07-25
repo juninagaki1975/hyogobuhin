@@ -52,7 +52,7 @@ $edit = $stmh -> fetch();
                 <td></td>
                 <td></td>
                 <td>
-                    <input type="submit" value="更新">
+                    <input type="submit" value="更新確認へ">
                 </td>
             </tr>
         </table>

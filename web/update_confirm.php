@@ -60,7 +60,7 @@ try{
                 <td></td>
                 <td>
                     <form action="update_done.php" method="POST">
-                        <button type="submit" name="btn" value = <?php echo $id; ?> >更新確認へ</button>
+                        <button type="submit" name="btn" value = <?php echo $id; ?> >更新</button>
                     </form>
                 </td>
             </tr>
