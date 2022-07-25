@@ -13,13 +13,13 @@ try{
     $msg = $e->getMessage();
 }
 
-try{
-    $sql = "insert into anken values($id,$anken_id,'$item_name')";
-    $stmt = $pdo -> query($sql);
-    $stmt -> execute();
-} catch (PDOException $e) { 
-    $msg = $e->getMessage();
-}
+// try{
+//     $sql = "insert into anken values($id,$anken_id,'$item_name')";
+//     $stmt = $pdo -> query($sql);
+//     $stmt -> execute();
+// } catch (PDOException $e) { 
+//     $msg = $e->getMessage();
+// }
 
 ?>
 
@@ -55,6 +55,15 @@ try{
                     <?php echo $item_name;?>
                 </td>
 
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <form action="update_done.php" method="POST">
+                        <button type="submit" name="btn" value = <?php echo $id; ?> >決定</button>
+                    </form>
+                </td>
             </tr>
         </table>
    

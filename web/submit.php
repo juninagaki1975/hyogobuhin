@@ -29,7 +29,7 @@ $count = ++$result[0];
     <?php echo date("Y-m-d"); ?>
     <hr>
 
-    <form action="confirm.php" method="POST">
+    <form action="submit_confirm.php" method="POST">
         <table>
             <tr>
                 <th>No.</th>
