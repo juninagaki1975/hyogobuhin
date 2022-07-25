@@ -23,8 +23,10 @@ try{
 }
 
 $to = 'juninagaki1975@gmail.com';
-$subject = '削除：'.$id;
-$message = "以下のデータが削除されました：\r\n ID： ".$id."\r\n 案件番号： ".$anken_id."\r\n 件名： ".$item_name;
+// $subject = '削除：'.$id;
+// $message = "以下のデータが削除されました：\r\n ID： ".$id."\r\n 案件番号： ".$anken_id."\r\n 件名： ".$item_name;
+$subject = '削除：';
+$message = "以下のデータが削除されました：";
 $headers = "From: juninagaki1975@gmail.com";
 mb_send_mail($to, $subject, $message, $headers);
 
