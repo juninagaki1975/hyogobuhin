@@ -22,7 +22,7 @@ try{
     $msg = $e->getMessage();
 }
 
-$to = "juninagaki1975@gmail";
+$to = "juninagaki1975@gmail.com";
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
