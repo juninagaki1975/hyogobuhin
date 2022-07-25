@@ -34,7 +34,7 @@ $count = ++$result[0];
             <tr>
                 <th>No.</th>
                 <td>
-                    <input type="number" name="id" placeholder="<?php echo $count; ?>">
+                    <label><?php echo $count; ?></label>
                 </td>
             </tr>
             <tr>
