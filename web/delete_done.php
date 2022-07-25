@@ -23,7 +23,7 @@ try{
 }
 
 $to = "juninagaki1975@gmail.com";
-$mail_text = "下記のデータが削除されました\n".$data
+$mail_text = "下記のデータが削除されました\n".$data;
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
