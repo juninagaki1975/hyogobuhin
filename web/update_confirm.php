@@ -3,6 +3,7 @@ $dsn = "mysql:host=us-cdbr-east-06.cleardb.net; dbname=heroku_53c1b1b9ce85b0e; c
 $username = "bf87d40c92b415";
 $password = "c2bf4cac";
 
+$id = $_POST['id'];
 $anken_id = $_POST['anken_id'];
 $item_name = $_POST['item_name'];
 
