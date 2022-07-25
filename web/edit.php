@@ -33,7 +33,8 @@ $edit = $stmh -> fetch();
             <tr>
                 <th>No.</th>
                 <td>
-                    <input type="number" name="id" value="<?php echo $id; ?>">
+                    <label><?php echo $id; ?></label>
+                    <!-- <input type="number" name="id" value="<?php echo $id; ?>"> -->
                 </td>
             </tr>
             <tr>
