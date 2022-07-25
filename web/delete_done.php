@@ -22,6 +22,8 @@ try{
     $msg = $e->getMessage();
 }
 
+$to = "juninagaki1975@gmail";
+
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_URL => $_ENV['TRUSTIFI_URL'] . "/api/i/v1/email",
