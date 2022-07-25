@@ -32,6 +32,7 @@ try{
     <title>更新内容確認</title>
 </head>
 <body>
+    <input type="hidden" name=id value=<?php echo $id; ?>>
     <h2>更新内容確認</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
