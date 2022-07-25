@@ -23,7 +23,7 @@ try{
 }
 
 $to = "juninagaki1975@gmail.com";
-$title = "[削除] ID: ".$data['id'];
+$title = "[削除] ID: ".$data['id']." ".date("Y-m-d");
 $mail_text = "下記のデータが削除されました<br/><br/>ID: ".$data['id']."<br/>案件番号:　".$data['anken_id']."<br/>件名: ".$data['item_name'];
 
 $curl = curl_init();
