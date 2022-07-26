@@ -15,13 +15,8 @@ try{
 // while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
 //     $rows[] = $row;
 // }
-$arr = ['No.','案件番号','件名'];
-$keys = ['id','anken_id','item_name'];
-
-// キーワード検索
-$key_id = $_POST['id'];
-$key_anken_id = $_POST['anken_id'];
-$key_item_name = $_POST['item_name'];
+$arr = ['No.','案件番号','案件名','更新日','得意先','先方担当','EndUSer','メーカー','タイトル','車台番号','送り先','自社担当','進捗'];
+$keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','enduser','maker','title','chassis','shipto','repname','item_status'];
 
 $val = $_POST;
 $i = 0;
@@ -89,30 +84,74 @@ $stmh -> execute();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>検索</title>
+    <link rel=”stylesheet” href=”css/style.css”>
 </head>
 <body>
-    <h2>検索</h2>
+<h2>兵庫部品</h2>
+    <div class="nav">
+        <ul>
+            <li><a href="#">検索</a></li>
+            <li><a href="#">新規登録</a></li>
+        </ul>
+    </div>
     <br>
     <form action="search.php" method="POST">
-        <table class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
+        <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
-                <th><?php echo $arr[1] ;?></th>
-                <th><?php echo $arr[2] ;?></th>
+                <th>期間</th>
+                <td>
+                    <input type="date" name="date_from">
+                     〜 
+                    <input type="date" name="date_to">
+                </td>
             </tr>
+            <tr><td><br></td></tr>
             <tr>
-                <!-- <td><input type="number" name="id"></td> -->
+                <th><?php echo $arr[1];?></th>
                 <td><input type="number" name="anken_id"></td>
+                <th><?php echo $arr[2];?></th>
                 <td><input type="text" name="item_name"></td>
             </tr>
+            <!-- <tr><td><br></td></tr> -->
+            <tr>
+                <th><?php echo $arr[4];?></th>
+                <td><input type="text" name="tokuisaki"></td>
+                <th><?php echo $arr[5];?></th>
+                <td><input type="text" name="senpoutantou"></td>
+            </tr>
+            <tr>
+                <th><?php echo $arr[6];?></th>
+                <td><input type="text" name="enduser"></td>
+            </tr>
+            <!-- <tr><td><br></td></tr> -->
+            <tr>
+                <th><?php echo $arr[7];?></th>
+                <td><input type="text" name="chassis"></td>
+                <th><?php echo $arr[8];?></th>
+                <td><input type="text" name="shipto"></td>
+            </tr>
+            <!-- <tr><td><br></td></tr> -->
+            <tr>
+                <th><?php echo $arr[9];?></th>
+                <td><input type="text" name="repname"></td>
+            </tr>
+            <tr>
+                <th><?php echo $arr[10];?></th>
+                <td><input type="text" name="item_status"></td>
+            </tr>
+
         </table>
         <td><p><input type="submit" name="search" value="検索"></p></td>
     </form>
     <hr>
     <table class="table-border" cellspacing="1" border="1" style="border-collapse: collapse">
         <tr>
-            <th><?php echo $arr[0] ;?></th>
-            <th><?php echo $arr[1] ;?></th>
-            <th><?php echo $arr[2] ;?></th>
+            <?php 
+                for ($i = 0; $i < 13; $i ++ ) {
+                    echo "<th>";
+                    echo $arr[$i]; 
+                    echo "</th>";
+                };?>
             <th>編集</th>
             <th>削除</th>
         </tr>
@@ -129,6 +168,37 @@ $stmh -> execute();
                 echo '<td>';
                 echo $row['item_name']."\n";
                 echo '</td>';
+                echo '<td>';
+                echo $row['update_at']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['tokuisaki']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['senpoutantou']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['enduser']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['maker']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['title']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['chassis']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['shipto']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['repname']."\n";
+                echo '</td>';
+                echo '<td>';
+                echo $row['item_status']."\n";
+                echo '</td>';
+
                 echo '<td>';
                 echo '<form action="edit.php" method="POST">';
                 echo '<button type="submit" name="btn" value ="'.$row['id'].'">編集</button>';

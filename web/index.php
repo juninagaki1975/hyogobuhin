@@ -29,6 +29,7 @@ $aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
     <a href="search.php">検索</a>
     <a href="submit.php">新規登録</a>
     <hr>
+    <a href="login.php">ログアウト</a>
 
 </body>
 </html>

@@ -1,0 +1,14 @@
+id          int
+anken_id	int
+item_name   varchar
+update_at   datetime
+tokuisaki   varchar 20
+senpoutantou varchar 10
+enduser     varchar 20
+maker		varchar 20
+title		varchar 30
+chassis		varchar 30
+shipto		varchar 20
+repname		varchar 10
+item_status	varchar 10
+
