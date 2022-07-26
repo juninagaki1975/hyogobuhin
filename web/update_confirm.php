@@ -70,7 +70,7 @@ try{
 </body>
 <footer>
     <br>
-    <a href="index.php">タイトルに戻る</a>
+    <a href="main.php">タイトルに戻る</a>
     <hr>
 
 </footer>

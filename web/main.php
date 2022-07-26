@@ -9,11 +9,9 @@ try{
     $msg = $e->getMessage();
 }
 
-$id = $_POST['btn'];
-$sql = "SELECT * FROM anken WHERE id=".$id;
-$stmh = $pdo -> query($sql);
-$data = $stmh -> fetch();
-
+$sql = "select * from anken";
+$sth = $pdo -> query($sql);
+$aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
 ?>
 
 <!DOCTYPE html>
@@ -22,19 +20,16 @@ $data = $stmh -> fetch();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>データ更新</title>
+    <title>メイン画面</title>
 </head>
 <body>
-    <h2>データ更新</h2>
+    <h2>兵庫部品システム</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <p>更新しました</p>
-   
-</body>
-<footer>
-    <br>
-    <a href="main.php">タイトルに戻る</a>
+    <a href="search.php">検索</a>
+    <a href="submit.php">新規登録</a>
     <hr>
+    <a href="login.php">ログアウト</a>
 
-</footer>
+</body>
 </html>

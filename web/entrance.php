@@ -22,7 +22,7 @@ if (!$result) {
 } elseif ($result['name'] === $username) {
     if ($result['pass'] === $pass) {
     $msg = "ユーザー確認成功";
-    $link = "<a href='index.php'>メイン画面へ</a>";     
+    $link = "<a href='main.php'>メイン画面へ</a>";     
     } else {
         $msg = "パスワードが違います";
         $link = "<a href='login.php'>ログイン画面に戻る</a>";     

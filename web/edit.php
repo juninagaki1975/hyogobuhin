@@ -61,7 +61,7 @@ $edit = $stmh -> fetch();
 
     <br>
     <hr>
-    <a href="index.php">タイトルに戻る</a>
+    <a href="main.php">タイトルに戻る</a>
 
 </body>
 </html>

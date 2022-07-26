@@ -9,9 +9,11 @@ try{
     $msg = $e->getMessage();
 }
 
-$sql = "select * from anken";
-$sth = $pdo -> query($sql);
-$aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
+$sql = "SELECT name FROM users";
+$stmt = $pdo -> query($sql);
+$users = $stmt -> fetch();
+echo $users['name'];
+
 ?>
 
 <!DOCTYPE html>
@@ -20,16 +22,37 @@ $aryColumn = $sth -> fetchAll(PDO::FETCH_COLUMN);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メイン画面</title>
+    <title>ログイン画面</title>
 </head>
 <body>
-    <h2>兵庫部品システム</h2>
+    <h2>兵庫部品システム<br>ログイン画面</h2>
     <?php echo date("Y-m-d"); ?>
     <hr>
-    <a href="search.php">検索</a>
-    <a href="submit.php">新規登録</a>
+    <form action="entrance.php" method="POST">
+        <table>
+            <tr>
+                <th>ユーザーID</th>
+                <td>
+                    <input type="text" name="username" id="username" required>
+                </td>
+            </tr>
+            <!-- <tr>
+                <th>メールアドレス</th>
+                <td>
+                    <input type="email" name="email" id="email"  required>
+                </td>
+            </tr> -->
+            <tr>
+                <th>パスワード</th>
+                <td>
+                    <input type="password" name="pass" id="pass" required>
+                </td>                
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="決定">
+        </p>
+    </form>
     <hr>
-    <a href="login.php">ログアウト</a>
-
 </body>
 </html>
