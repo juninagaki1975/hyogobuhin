@@ -12,8 +12,6 @@ try{
 $sql = "SELECT name FROM users";
 $stmt = $pdo -> query($sql);
 $users = $stmt -> fetch();
-echo $users['name'];
-
 ?>
 
 <!DOCTYPE html>
@@ -22,13 +20,15 @@ echo $users['name'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>ログイン画面</title>
 </head>
 <body>
-    <h2>兵庫部品システム<br>ログイン画面</h2>
-    <?php echo date("Y-m-d"); ?>
-    <hr>
-    <form action="entrance.php" method="POST">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a href="#" class="navbar-brand mx-2">ログイン画面</a>
+    </nav>
+    <div class="container-fluid my-3">
+     <form action="entrance.php" method="POST">
         <table>
             <tr>
                 <th>ユーザーID</th>
@@ -49,10 +49,16 @@ echo $users['name'];
                 </td>                
             </tr>
         </table>
-        <p>
+        <p class="my-3">
             <input type="submit" value="決定">
         </p>
     </form>
-    <hr>
+    </div>
 </body>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <hr>
+            <p class="text-center text-muted">&copy; 2022 株式会社兵庫部品</p>
+        </footer>
+    </div>
 </html>

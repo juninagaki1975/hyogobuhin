@@ -44,11 +44,38 @@ $edit = $stmh -> fetch();
                 </td>
             </tr>
             <tr>
-                <th>件名</th>
+                <th>案件名</th>
                 <td>
                     <input type="text" name="item_name" value="<?php echo $edit['item_name']; ?>">
                 </td>
             </tr>
+            <tr>
+                <th>得意先</th>
+                <td>
+                    <input type="text" name="tokuisaki" value="<?php echo $edit['tokuisaki']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>先方担当</th>
+                <td>
+                    <input type="text" name="senpoutantou" value="<?php echo $edit['senpoutantou']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>EndUser</th>
+                <td>
+                    <input type="text" name="enduser" value="<?php echo $edit['enduser']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>メーカー</th>
+                <td>
+                    <input type="text" name="maker" value="<?php echo $edit['maker']; ?>">
+                </td>
+            </tr>
+
+
+
             <tr>
                 <td></td>
                 <td></td>

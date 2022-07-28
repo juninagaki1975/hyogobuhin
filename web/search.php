@@ -37,7 +37,6 @@ if (array_sum($ischk)===0){
     $search = "SELECT * FROM anken";
 }
 
-
 $i = 0;
 if (array_sum($ischk)===1){
     foreach($ischk as $is){
@@ -69,7 +68,7 @@ if (array_sum($ischk) > 1){
     $search = "SELECT * FROM anken WHERE ".implode(" AND ",$where);
     // $search = "SELECT * FROM anken WHERE ".$where;
 }
-echo $search;
+// echo $search;
 
 $sql = $search;
 $stmh = $pdo -> prepare($sql);
@@ -83,18 +82,21 @@ $stmh -> execute();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>検索</title>
-    <link rel=”stylesheet” href=”css/style.css”>
 </head>
 <body>
-<h2>兵庫部品</h2>
-    <div class="nav">
-        <ul>
-            <li><a href="#">検索</a></li>
-            <li><a href="#">新規登録</a></li>
-        </ul>
-    </div>
-    <br>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a href="#" class="navbar-brand mx-2">検索画面  </a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="main.php">HOME</a>
+            <a class="nav-item nav-link active" href="submit.php">新規登録</a>
+        </div>
+        <div class="navbar-nav col-md justify-content-end mx-2">
+            <a class="nav-item nav-link active" href="index.php">ログアウト</a>
+        </div>
+    </nav>
     <form action="search.php" method="POST">
         <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
@@ -139,13 +141,37 @@ $stmh -> execute();
                 <th><?php echo $arr[10];?></th>
                 <td><input type="text" name="item_status"></td>
             </tr>
+            <tr>
+                <th><?php echo $arr[11];?></th>
+                <td>
+                    <select name="repname" id="repname">
+                        <option value=""></option>
+                        <option value="hotta">堀田</option>
+                    </select>
+                </td>
+                <th><?php echo $arr[12];?></th>
+                <td>
+                        <select name="item_status" id="item_status">
+                            <option value=""></option>
+                            <option value="inquiry">見積中</option>
+                            <option value="inq_done">見積済</option>
+                            <option value="inq_again">再見積済</option>
+                            <option value="order">注文依頼</option>
+                            <option value="commit">注文確定</option>
+                            <option value="shipping">発送中</option>
+                            <option value="complete">完了</option>
+                        </select>
+                    </td>
+            </tr>
+
 
         </table>
         <td><p><input type="submit" name="search" value="検索"></p></td>
     </form>
     <hr>
-    <table class="table-border" cellspacing="1" border="1" style="border-collapse: collapse">
+    <table class="table table-striped" cellspacing="1" border="1" style="border-collapse: collapse">
         <tr>
+            <th>確認</th>
             <?php 
                 for ($i = 0; $i < 13; $i ++ ) {
                     echo "<th>";
@@ -159,6 +185,11 @@ $stmh -> execute();
             $i = 1;
             foreach ($stmh as $row) {
                 echo '<tr>';
+                echo '<td>';
+                echo '<form action="inquiry.php" method="POST">';
+                echo '<button type="submit" name="btn" value ="'.$row['id'].'">見積</button>';
+                echo '</form>';
+                echo '</td>';
                 echo '<td>';
                 echo $row['id']."\n";
                 echo '</td>';
@@ -204,6 +235,7 @@ $stmh -> execute();
                 echo '<button type="submit" name="btn" value ="'.$row['id'].'">編集</button>';
                 echo '</form>';
                 echo '</td>';
+
                 echo '<td>';
                 echo '<form action="delete_confirm.php" method="POST">';
                 echo '<button type="submit" name="btn" value ="'.$row['id'].'">削除</button>';
