@@ -75,7 +75,7 @@ unset($sql);
 unset($stmt);
 
 try{
-    $sql = "SELECT anken_id FROM anken";
+    $sql = "SELECT * FROM anken WHERE ".$anken_id;
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
     $data = $stmt -> fetch();
