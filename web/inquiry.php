@@ -35,10 +35,6 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
         <a href="#" class="navbar-brand mx-2">見積登録</a>
     </nav>
     <div class="mx-3 my-3">
-        <p>見積データ<p3>
-    </div>
-
-    <div class="mx-3 my-3">
     <form action="inquiry_confirm.php" method="POST">
         <!-- <input type="hidden" name=id value=<?php echo $count; ?>> -->
         <div>
@@ -83,7 +79,7 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
     </div>
     
 </body>
-<footer>
+<footer class="mx-3 my-3">
     <br>
     <a href="main.php">タイトルに戻る</a>
     <hr>
