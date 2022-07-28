@@ -90,7 +90,7 @@ $stmh -> execute();
         </div>
     </nav>
     <div class="mx-3 my-3">
-        <p>検索</p>
+        <h3>検索</h3>
     </div>
 
 <div class="mx-3 my-3">
