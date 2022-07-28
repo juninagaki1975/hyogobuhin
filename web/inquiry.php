@@ -62,7 +62,7 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
             </tr>
             <tr>
                 <th><?php echo $arr[3];?></th>
-                <td><textarea name="part_remark" id="part_remark" cols="50" rows="10"></textarea>
+                <td><textarea name="part_remark" id="part_remark" cols="50" rows="3"></textarea>
             </tr>
 
             <tr>
