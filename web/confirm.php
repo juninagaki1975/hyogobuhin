@@ -87,7 +87,7 @@ try{
     $msg = $e->getMessage();
 }
 
-echo $sql;
+echo $msg;
 
 
 ?>
