@@ -92,7 +92,7 @@ $stmh -> execute();
     <div class="container-fluid mx-2 px-2">
         <p>検索</p>
     </div>
-</div>
+
 <form action="search.php" method="POST">
         <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
