@@ -34,7 +34,6 @@ $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','end
         <a href="#" class="navbar-brand mx-2">新規登録</a>
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="main.php">HOME</a>
-            <a class="nav-item nav-link active" href="search.php">検索</a>
         </div>
         <div class="navbar-nav col-md justify-content-end mx-2">
             <a class="nav-item nav-link active" href="index.php">ログアウト</a>
