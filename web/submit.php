@@ -12,7 +12,7 @@ try{
 $sql = "select * from anken";
 $stmt = $pdo -> query($sql);
 $stmt -> execute();
-$row_count = $stmt -> num_rowa;
+$row_count = $stmt -> num_rows;
 
 echo $row_count;
 
