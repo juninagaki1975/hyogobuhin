@@ -33,7 +33,14 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
         <a href="#" class="navbar-brand mx-2">見積登録</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="main.php">HOME</a>
+        </div>
+        <div class="navbar-nav col-md justify-content-end mx-2">
+            <a class="nav-item nav-link active" href="index.php">ログアウト</a>
+        </div>
     </nav>
+
     <div class="mx-3 my-3">
     <form action="inquiry_confirm.php" method="POST">
         <!-- <input type="hidden" name=id value=<?php echo $count; ?>> -->
@@ -79,10 +86,10 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
     </div>
     
 </body>
-<footer class="mx-3 my-3">
-    <br>
-    <a href="main.php">タイトルに戻る</a>
-    <hr>
-
-</footer>
+<div class="container">
+    <footer class="py-3 my-4">
+        <hr>
+        <p class="text-center text-muted">&copy; 2022 株式会社兵庫部品</p>
+  </footer>
+</div>
 </html>
