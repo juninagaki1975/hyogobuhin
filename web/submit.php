@@ -15,9 +15,6 @@ $stmt -> execute();
 $result = $stmt -> fetch();
 $count = ++$result[0];
 
-echo $result[0];
-echo $count;
-
 $arr = ['No.','案件番号','案件名','更新日','得意先','先方担当','EndUSer','メーカー','タイトル','車台番号','送り先','自社担当','進捗'];
 $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','enduser','maker','title','chassis','shipto','repname','item_status'];
 

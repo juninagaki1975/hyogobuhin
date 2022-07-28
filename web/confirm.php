@@ -63,6 +63,8 @@ try{
     $msg = $e->getMessage();
 }
 
+echo $anken_id;
+
 try{
     $sql = "insert into anken values($id,$anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
     $stmt = $pdo -> query($sql);
@@ -74,6 +76,8 @@ try{
 unset($sql);
 unset($stmt);
 
+echo $sql;
+
 try{
     $sql = "SELECT * FROM anken WHERE ".$anken_id;
     $stmt = $pdo -> query($sql);
@@ -82,6 +86,9 @@ try{
 } catch (PDOException $e) { 
     $msg = $e->getMessage();
 }
+
+echo $sql;
+
 
 ?>
 
