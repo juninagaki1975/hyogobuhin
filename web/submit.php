@@ -41,7 +41,6 @@ $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','end
     </nav>
 
     <form action="confirm.php" method="POST">
-        <!-- <input type="hidden" name=id value=<?php echo $count; ?>> -->
         <div class="mx-3 my-3">
             <p>案件データ</p>
         </div>
