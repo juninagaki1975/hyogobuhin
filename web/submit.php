@@ -13,8 +13,8 @@ try{
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
     $result = $stmt -> fetch();
-    echo $result;
-    $id = max($result)+1;
+    echo $stmt;
+    $id = max($stmt)+1;
 } catch (Exception $e) {
     echo 'データがありません: ',  $e->getMessage(), "\n";    
 }
