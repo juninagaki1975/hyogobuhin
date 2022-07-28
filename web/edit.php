@@ -84,15 +84,9 @@ $edit = $stmh -> fetch();
                 </td>
             </tr>
 
+            <tr><td><br></td></tr>
+            <td><input type="submit" value="更新確認へ"></td>
 
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <input type="submit" value="更新確認へ">
-                </td>
-            </tr>
         </table>
     </form>
     </div>
