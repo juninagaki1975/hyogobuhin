@@ -95,7 +95,7 @@ $stmh -> execute();
 
 <div class="mx-3 my-3">
     <form action="search.php" method="POST">
-        <table colspan="2" class="table-border text-center" cellspacing="1" border="0" style="border-collapse: collapse">
+        <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
                 <th>期間</th>
                 <td>
@@ -167,7 +167,7 @@ $stmh -> execute();
     </div>    
 
     <hr>
-    <table class="table table-striped" cellspacing="1" border="1" style="border-collapse: collapse">
+    <table class="table table-striped  text-center" cellspacing="1" border="1" style="border-collapse: collapse">
         <tr>
             <th>確認</th>
             <?php 
