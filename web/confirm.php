@@ -5,7 +5,7 @@ $password = "c2bf4cac";
 
 // 稻垣 2022.7.28
 // ここはforとかで簡潔化の余地アリ
-// $id = $_POST['id'];
+$id = $_POST['id'];
 // if (!isset($id)){
 //     $id = "null";
 // }
@@ -66,7 +66,7 @@ try{
 }
 
 try{
-    $sql = "insert into anken values($id,$anken_id,'$item_name',$update_at)";
+    $sql = "insert into anken values($id,$anken_id,'$item_name','$update_at')";
     // $sql = "insert into anken values(".$id.",".$anken_id.",'".$item_name."',".$update_at.",'".$tokuisaki."','".$senpoutantou."','".$enduser."','".$maker."','".$title."','".$chassis."','".$shipto."','".$repname."','".$item_status."')";
 
     $stmt = $pdo -> query($sql);
