@@ -89,11 +89,12 @@ $stmh -> execute();
             <a class="nav-item nav-link active" href="index.php">ログアウト</a>
         </div>
     </nav>
-    <div class="container-fluid mx-2 px-2">
+    <div class="mx-3 px-3">
         <p>検索</p>
     </div>
 
-<form action="search.php" method="POST">
+<div class="mx-3 my-3">
+    <form action="search.php" method="POST">
         <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
                 <th>期間</th>
@@ -164,6 +165,7 @@ $stmh -> execute();
         </table>
         <td><p><input type="submit" name="search" value="検索"></p></td>
     </form>
+    </div>    
 
     <hr>
     <table class="table table-striped" cellspacing="1" border="1" style="border-collapse: collapse">
