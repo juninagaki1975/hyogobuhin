@@ -22,12 +22,16 @@ $edit = $stmh -> fetch();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>編集画面</title>
 </head>
 <body>
-    <h2>編集画面</h2>
-    <?php echo date("Y-m-d"); ?>
-    <hr>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a href="#" class="navbar-brand mx-2">編集画面</a>
+        <div class="navbar-nav col-md justify-content-end mx-2">
+            <a class="nav-item nav-link active" href="index.php">ログアウト</a>
+        </div>
+    </nav>
     <form action="update_confirm.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $id; ?>">
     <table>
