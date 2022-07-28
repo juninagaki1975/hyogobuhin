@@ -26,12 +26,18 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>見積登録</title>
 </head>
 <body>
-    <h2>見積登録</h2>
-    <?php echo date("Y-m-d"); ?>
-    <hr>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a href="#" class="navbar-brand mx-2">見積登録</a>
+    </nav>
+    <div class="mx-3 my-3">
+        <p>見積データ<p3>
+    </div>
+
     <form action="inquiry_confirm.php" method="POST">
         <!-- <input type="hidden" name=id value=<?php echo $count; ?>> -->
         <div>

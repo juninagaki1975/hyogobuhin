@@ -92,7 +92,7 @@ $edit = $stmh -> fetch();
 
     <br>
     <hr>
-    <a href="main.php">タイトルに戻る</a>
+    <a href="main.php">Homeに戻る</a>
 
 </body>
 </html>
