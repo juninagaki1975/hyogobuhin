@@ -13,7 +13,7 @@ $sql = "select id from anken";
 $stmt = $pdo -> query($sql);
 $stmt -> execute();
 $result = $stmt -> fetch();
-$id = max($result);
+$id = max($result)+1;
 
 $arr = ['No.','案件番号','案件名','更新日','得意先','先方担当','EndUSer','メーカー','タイトル','車台番号','送り先','自社担当','進捗'];
 $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','enduser','maker','title','chassis','shipto','repname','item_status'];
