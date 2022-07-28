@@ -94,7 +94,7 @@ $stmh -> execute();
     </div>
 
 <div class="mx-3 my-3">
-    <form action="search.php" method="POST">
+    <form action="main.php" method="POST">
         <table colspan="2" class="table-border" cellspacing="1" border="0" style="border-collapse: collapse">
             <tr>
                 <th>期間</th>
@@ -161,7 +161,7 @@ $stmh -> execute();
                     </td>
             </tr>
             <tr><td><br></td></tr>
-                        <td><input type="submit" name="search" value="登録"></td>
+                        <td><input type="submit" name="search" value="検索"></td>
         </table>
     </form>
     </div>    
