@@ -89,7 +89,7 @@ $stmh -> execute();
             <a class="nav-item nav-link active" href="index.php">ログアウト</a>
         </div>
     </nav>
-    <div class="mx-3 px-3">
+    <div class="mx-3 my-3">
         <p>検索</p>
     </div>
 
@@ -160,10 +160,9 @@ $stmh -> execute();
                         </select>
                     </td>
             </tr>
-
-
+            <tr><td><br></td></tr>
+                        <td><input type="submit" name="search" value="登録"></td>
         </table>
-        <td><p><input type="submit" name="search" value="検索"></p></td>
     </form>
     </div>    
 
