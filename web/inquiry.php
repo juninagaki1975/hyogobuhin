@@ -38,6 +38,7 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
         <p>見積データ<p3>
     </div>
 
+    <div class="mx-3 my-3">
     <form action="inquiry_confirm.php" method="POST">
         <!-- <input type="hidden" name=id value=<?php echo $count; ?>> -->
         <div>
@@ -79,6 +80,7 @@ $keys = ['anken_id','part_name','part_num','part_remark','unit_price','qty','tot
             <td><input type="submit" value="登録"></td>
         </table>
     </form>
+    </div>
     
 </body>
 <footer>
