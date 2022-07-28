@@ -5,10 +5,10 @@ $password = "c2bf4cac";
 
 // 稻垣 2022.7.28
 // ここはforとかで簡潔化の余地アリ
-$id = $_POST['id'];
-if (!isset($id)){
-    $id = "null";
-}
+// $id = $_POST['id'];
+// if (!isset($id)){
+//     $id = "null";
+// }
 $anken_id = $_POST['anken_id'];
 if (!isset($anken_id)){
     $anken_id = "null";
@@ -17,10 +17,12 @@ $item_name = $_POST['item_name'];
 if (!isset($item_name)){
     $item_name = "null";
 }
-$update_at = $_POST['update_at'];
-if (!isset($update_at)){
-    $update_at = "null";
-}
+// $update_at = $_POST['update_at'];
+// if (!isset($update_at)){
+//     $update_at = "null";
+// }
+$update_at = date("Y-m-d");
+
 $tokuisaki = $_POST['tokuisaki'];
 if (!isset($tokuisaki)){
     $tokuisaki = "null";
@@ -62,8 +64,6 @@ try{
 } catch (PDOException $e ) {
     $msg = $e->getMessage();
 }
-
-echo $anken_id;
 
 try{
     $sql = "insert into anken values($id,$anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
