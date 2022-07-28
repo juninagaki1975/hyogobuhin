@@ -52,12 +52,66 @@ $data = $stmh -> fetch();
                 </td>
             </tr>
             <tr>
-                <th>件名</th>
+                <th>案件名</th>
                 <td>
                     <?php echo $data['item_name'];?>
                 </td>
-
             </tr>
+            <tr>
+                <th>得意先</th>
+                <td>
+                    <?php echo $data['tokuisaki'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>先方担当</th>
+                <td>
+                    <?php echo $data['senpoutantou'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>EndUser</th>
+                <td>
+                    <?php echo $data['enduser'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>メーカー</th>
+                <td>
+                    <?php echo $data['maker'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>タイトル</th>
+                <td>
+                    <?php echo $data['title'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>車台番号</th>
+                <td>
+                    <?php echo $data['chassis'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>送り先</th>
+                <td>
+                    <?php echo $data['shipto'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>自社担当</th>
+                <td>
+                    <?php echo $data['repname'];?>
+                </td>
+            </tr>
+            <tr>
+                <th>進捗</th>
+                <td>
+                    <?php echo $data['item_status'];?>
+                </td>
+            </tr>
+
             <tr><td><br></td></tr>
             <tr>
                 <td>

@@ -83,7 +83,47 @@ $edit = $stmh -> fetch();
                     <input type="text" name="maker" value="<?php echo $edit['maker']; ?>">
                 </td>
             </tr>
-
+            <tr>
+                <th>タイトル</th>
+                <td>
+                    <input type="text" name="title" value="<?php echo $edit['title']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>車台番号</th>
+                <td>
+                    <input type="text" name="chassis" value="<?php echo $edit['chassis']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>送り先</th>
+                <td>
+                    <input type="text" name="shipto" value="<?php echo $edit['shipto']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>自社担当</th>
+                <td>
+                    <select name="repname" id="repname">
+                        <option value=""></option>
+                        <option value="hotta">堀田</option>
+                    </select>
+                </td>
+            <tr>
+                <th>進捗</th>
+                <td>
+                    <select name="item_status" id="item_status">
+                        <option value=""></option>
+                        <option value="inquiry">見積中</option>
+                        <option value="inq_done">見積済</option>
+                        <option value="inq_again">再見積済</option>
+                        <option value="order">注文依頼</option>
+                        <option value="commit">注文確定</option>
+                        <option value="shipping">発送中</option>
+                        <option value="complete">完了</option>
+                    </select>
+                </td>
+            </tr>
             <tr><td><br></td></tr>
             <tr>
                 <td><input type="submit" value="更新確認へ"></td>
