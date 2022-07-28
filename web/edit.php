@@ -28,10 +28,16 @@ $edit = $stmh -> fetch();
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
         <a href="#" class="navbar-brand mx-2">編集画面</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="main.php">HOME</a>
+        </div>
+
         <div class="navbar-nav col-md justify-content-end mx-2">
             <a class="nav-item nav-link active" href="index.php">ログアウト</a>
         </div>
     </nav>
+
+    <div class="mx-3 my-3">
     <form action="update_confirm.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $id; ?>">
     <table>
@@ -89,10 +95,14 @@ $edit = $stmh -> fetch();
             </tr>
         </table>
     </form>
-
-    <br>
-    <hr>
-    <a href="main.php">Homeに戻る</a>
-
+    </div>
 </body>
+<div class="container">
+    <footer class="py-3 my-4">
+        <hr>
+        <p class="text-center text-muted">&copy; 2022 株式会社兵庫部品</p>
+  </footer>
+</div>
+
+
 </html>
