@@ -79,8 +79,6 @@ echo $sql;
 // unset($sql);
 // unset($stmt);
 
-
-
 try{
     $sql = "SELECT * FROM anken WHERE anken_id =".$anken_id;
     $stmh = $pdo -> query($sql);
