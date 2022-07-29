@@ -9,7 +9,7 @@ try{
     $msg = $e->getMessage();
 }
 
-$id = 1
+$id = 1;
 
 // $sql = "select * from anken";
 // $stmt = $pdo -> query($sql);
