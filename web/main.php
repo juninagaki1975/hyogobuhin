@@ -106,47 +106,47 @@ $stmh -> execute();
             </tr>
             <tr><td><br></td></tr>
             <tr>
-                <th><?php echo $arr[1];?></th>
+                <th>案件番号</th>
                 <td><input type="number" name="anken_id"></td>
-                <th><?php echo $arr[2];?></th>
+                <th>案件名</th>
                 <td><input type="text" name="item_name"></td>
             </tr>
             <!-- <tr><td><br></td></tr> -->
             <tr>
-                <th><?php echo $arr[4];?></th>
+                <th>得意先</th>
                 <td><input type="text" name="tokuisaki"></td>
-                <th><?php echo $arr[5];?></th>
+                <th>先方担当</th>
                 <td><input type="text" name="senpoutantou"></td>
             </tr>
             <tr>
-                <th><?php echo $arr[6];?></th>
+                <th>EndUser</th>
                 <td><input type="text" name="enduser"></td>
             </tr>
             <!-- <tr><td><br></td></tr> -->
             <tr>
-                <th><?php echo $arr[7];?></th>
+                <th>車台番号</th>
                 <td><input type="text" name="chassis"></td>
-                <th><?php echo $arr[8];?></th>
+                <th>送り先</th>
                 <td><input type="text" name="shipto"></td>
             </tr>
             <!-- <tr><td><br></td></tr> -->
-            <tr>
-                <th><?php echo $arr[9];?></th>
+            <!-- <tr>
+                <th>自社担当</th>
                 <td><input type="text" name="repname"></td>
-            </tr>
-            <tr>
-                <th><?php echo $arr[10];?></th>
+            </tr> -->
+            <!-- <tr>
+                <th>進捗</th>
                 <td><input type="text" name="item_status"></td>
-            </tr>
+            </tr> -->
             <tr>
-                <th><?php echo $arr[11];?></th>
+                <th></th>
                 <td>
                     <select name="repname" id="repname">
                         <option value=""></option>
                         <option value="hotta">堀田</option>
                     </select>
                 </td>
-                <th><?php echo $arr[12];?></th>
+                <th>自社担当</th>
                 <td>
                         <select name="item_status" id="item_status">
                             <option value=""></option>
