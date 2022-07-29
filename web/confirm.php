@@ -87,7 +87,7 @@ try{
     $msg = $e->getMessage();
 }
 
-// echo $msg;
+echo $msg;
 
 
 ?>

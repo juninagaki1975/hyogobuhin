@@ -9,22 +9,22 @@ try{
     $msg = $e->getMessage();
 }
 
-$sql = "select * from anken";
-$stmt = $pdo -> query($sql);
-$stmt -> execute();
-$row_count = $stmt -> num_rows;
+// $sql = "select * from anken";
+// $stmt = $pdo -> query($sql);
+// $stmt -> execute();
+// $row_count = $stmt -> num_rows;
 
-echo $row_count;
+// echo $row_count;
 
-// try{
-//     $sql = "select id from anken";
-//     $stmt = $pdo -> query($sql);
-//     $stmt -> execute();
-//     $result = $stmt -> fetch();
-//     $id = max($stmt)+1;
-// } catch (Exception $e) {
-//     echo 'データがありません: ',  $e->getMessage(), "\n";    
-// }
+try{
+    $sql = "select id from anken";
+    $stmt = $pdo -> query($sql);
+    $stmt -> execute();
+    $result = $stmt -> fetch();
+    $id = max($stmt)+1;
+} catch (Exception $e) {
+    echo 'データがありません: ',  $e->getMessage(), "\n";    
+}
 
 $arr = ['No.','案件番号','案件名','更新日','得意先','先方担当','EndUSer','メーカー','タイトル','車台番号','送り先','自社担当','進捗'];
 $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','enduser','maker','title','chassis','shipto','repname','item_status'];
@@ -116,7 +116,7 @@ $keys = ['id','anken_id','item_name','update_at','tokuisaki','senpoutantou','end
 
                 </table>
         </div>
-        <!-- <input type="hidden" name="id" value="<?php echo $id; ?>"> -->
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
     </form>
 </body>
 <div class="container">
