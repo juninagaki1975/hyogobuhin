@@ -122,31 +122,27 @@ $stmh -> execute();
                 <th>EndUser</th>
                 <td><input type="text" name="enduser"></td>
             </tr>
-            <!-- <tr><td><br></td></tr> -->
+            <tr>
+                <th>メーカー</th>
+                <td><input type="text" name="maker"></td>
+                <th>タイトル</th>
+                <td><input type="text" name="title"></td>
+            </tr>
             <tr>
                 <th>車台番号</th>
                 <td><input type="text" name="chassis"></td>
                 <th>送り先</th>
                 <td><input type="text" name="shipto"></td>
             </tr>
-            <!-- <tr><td><br></td></tr> -->
-            <!-- <tr>
-                <th>自社担当</th>
-                <td><input type="text" name="repname"></td>
-            </tr> -->
-            <!-- <tr>
-                <th>進捗</th>
-                <td><input type="text" name="item_status"></td>
-            </tr> -->
             <tr>
-                <th></th>
+                <th>自社担当</th>
                 <td>
                     <select name="repname" id="repname">
                         <option value=""></option>
                         <option value="hotta">堀田</option>
                     </select>
                 </td>
-                <th>自社担当</th>
+                <th>進捗</th>
                 <td>
                         <select name="item_status" id="item_status">
                             <option value=""></option>
