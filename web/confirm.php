@@ -68,8 +68,6 @@ try{
 try{
     $sql = "insert into anken (anken_id, item_name,    update_at,   tokuisaki,   senpoutantou,  enduser,   maker,   title,    chassis,  shipto,   repname,   item_status)
                        values($anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
-    // $sql = "insert into anken values(".$id.",".$anken_id.",'".$item_name."',".$update_at.",'".$tokuisaki."','".$senpoutantou."','".$enduser."','".$maker."','".$title."','".$chassis."','".$shipto."','".$repname."','".$item_status."')";
-
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
 } catch (PDOException $e) { 
