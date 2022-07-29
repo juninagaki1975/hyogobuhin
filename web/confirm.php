@@ -74,10 +74,10 @@ try{
     $msg = $e->getMessage();
 }
 
-unset($sql);
-unset($stmt);
+// unset($sql);
+// unset($stmt);
 
-echo $sql;
+// echo $sql;
 
 // try{
 //     $sql = "SELECT * FROM anken WHERE anken_id =".$anken_id;
@@ -88,7 +88,7 @@ echo $sql;
 //     $msg = $e->getMessage();
 // }
 
-echo $msg;
+// echo $msg;
 
 
 ?>
