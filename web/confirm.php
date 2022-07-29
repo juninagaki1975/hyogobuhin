@@ -66,20 +66,22 @@ try{
     $msg = $e->getMessage();
 }
 
-try{
-    $sql = "SHOW VARIABLES LIKE 'AUTO_INCREMENT_INCREMENT';";
-    $stmt = $pdo -> query($sql);
-    $stmt -> execute();
-    $result = $stmt -> fetch();
-} catch (PDOException $e) { 
-    $msg = $e->getMessage();
-}
+// try{
+//     $sql = "SHOW VARIABLES LIKE 'AUTO_INCREMENT_INCREMENT';";
+//     $stmt = $pdo -> query($sql);
+//     $stmt -> execute();
+//     $result = $stmt -> fetch();
+// } catch (PDOException $e) { 
+//     $msg = $e->getMessage();
+// }
+
+$id = $pdo -> lastInsertId();
 
 // echo $msg;
 unset($stmt);
 
 try{
-    $sql = "insert into anken (anken_id, item_name,    update_at,   tokuisaki,   senpoutantou,  enduser,   maker,   title,    chassis,  shipto,   repname,   item_status) values($anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
+    $sql = "insert into anken (id,anken_id, item_name,    update_at,   tokuisaki,   senpoutantou,  enduser,   maker,   title,    chassis,  shipto,   repname,   item_status) values($id,$anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
                     //    $sql = "insert into anken (anken_id, item_name,    update_at,   tokuisaki,   senpoutantou,  enduser,   maker,   title,    chassis,  shipto,   repname,   item_status)
                     //    values($anken_id,'$item_name','$update_at','$tokuisaki','$senpoutantou','$enduser','$maker','$title','$chassis','$shipto','$repname','$item_status')";
     $stmt = $pdo -> query($sql);
