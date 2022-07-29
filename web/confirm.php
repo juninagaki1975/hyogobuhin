@@ -74,6 +74,7 @@ try{
 } catch (PDOException $e) { 
     $msg = $e->getMessage();
 }
+echo $result;
 $id = $result[0];
 
 echo $msg;
