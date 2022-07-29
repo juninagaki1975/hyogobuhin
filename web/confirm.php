@@ -70,10 +70,11 @@ try{
     $sql = "SHOW VARIABLES LIKE 'AUTO_INCREMENT_INCREMENT';";
     $stmt = $pdo -> query($sql);
     $stmt -> execute();
-    $id = $stmt -> fetch();
+    $result = $stmt -> fetch();
 } catch (PDOException $e) { 
     $msg = $e->getMessage();
 }
+$id = $result[0];
 
 echo $msg;
 unset($stmt);
