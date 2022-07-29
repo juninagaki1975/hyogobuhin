@@ -74,19 +74,21 @@ try{
     $msg = $e->getMessage();
 }
 
+echo $sql;
+
 // unset($sql);
 // unset($stmt);
 
-// echo $sql;
 
-// try{
-//     $sql = "SELECT * FROM anken WHERE anken_id =".$anken_id;
-//     $stmt = $pdo -> query($sql);
-//     $stmt -> execute();
-//     $data = $stmt -> fetch();
-// } catch (PDOException $e) { 
-//     $msg = $e->getMessage();
-// }
+
+try{
+    $sql = "SELECT * FROM anken WHERE anken_id =".$anken_id;
+    $stmh = $pdo -> query($sql);
+    $stmh -> execute();
+    $data = $stmh -> fetch();
+} catch (PDOException $e) { 
+    $msg = $e->getMessage();
+}
 
 // echo $msg;
 
