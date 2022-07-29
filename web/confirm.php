@@ -59,6 +59,7 @@ $item_status = $_POST['item_status'];
 if (!isset($item_status)){
     $item_status = "null";
 }
+
 try{
     $pdo = new PDO($dsn, $username, $password);
 } catch (PDOException $e ) {
@@ -76,12 +77,12 @@ try{
 
 echo $sql;
 
-// unset($sql);
+unset($sql);
 // unset($stmt);
 
 try{
-    $sql = "SELECT * FROM anken WHERE anken_id =".$anken_id;
-    $stmh = $pdo -> query($sql);
+    $sqlc = "SELECT * FROM anken WHERE anken_id =".$anken_id;
+    $stmh = $pdo -> query($sqlc);
     $stmh -> execute();
     $data = $stmh -> fetch();
 } catch (PDOException $e) { 
