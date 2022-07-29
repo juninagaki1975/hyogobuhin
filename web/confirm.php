@@ -74,9 +74,7 @@ try{
 } catch (PDOException $e) { 
     $msg = $e->getMessage();
 }
-echo var_dump($result);
-print_r($result);
-$id = $result[0];
+$id = $result['auto_increment_increment'];
 echo $id;
 
 echo $msg;
