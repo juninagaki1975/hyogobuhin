@@ -5,7 +5,7 @@ $password = "c2bf4cac";
 
 // 稻垣 2022.7.28
 // ここはforとかで簡潔化の余地アリ
-// $id = $_POST['id'];
+$id = $_POST['id'];
 // if (!isset($id)){
 //     $id = "null";
 // }
