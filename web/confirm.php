@@ -74,8 +74,10 @@ try{
 } catch (PDOException $e) { 
     $msg = $e->getMessage();
 }
-echo $result;
+echo var_dump($result);
+print_r($result);
 $id = $result[0];
+echo $id;
 
 echo $msg;
 unset($stmt);
