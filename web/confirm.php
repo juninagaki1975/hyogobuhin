@@ -76,10 +76,7 @@ try{
     $msg = $e->getMessage();
 }
 
-echo $sql;
-
-unset($sql);
-// unset($stmt);
+echo $msg;
 
 try{
     $sqlc = "SELECT * FROM anken WHERE anken_id =".$anken_id;
